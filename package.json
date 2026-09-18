@@ -1,0 +1,14 @@
+{
+  "name": "repolens",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w @repolens/api\" \"npm run dev -w @repolens/web\"",
+    "build": "npm run build -w @repolens/api && npm run build -w @repolens/web",
+    "check": "npm run check -w @repolens/api && npm run check -w @repolens/web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
